@@ -65,4 +65,7 @@ return require('packer').startup(function(use)
   use 'ray-x/go.nvim'
   use 'ray-x/guihua.lua' -- recommended if need floating window support
 
+  -- Copilot
+  use {"zbirenbaum/copilot.lua"}
+
 end)

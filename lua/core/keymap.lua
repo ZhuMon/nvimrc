@@ -38,20 +38,19 @@ map('n', '<F9>', ':lua require"dap".repl.toggle()<CR>', {noremap = true, silent 
 
 -- ### Telescope
 -- search files, no ignore, hidden files
-map(
-  'n', '<Leader>ff',
-  ':lua require"telescope.builtin".find_files({no_ignore = true, hidden = true})<CR>',
-  {noremap = true, silent = true}
-)
+map('n', '<Leader>ff',
+    ':lua require"telescope.builtin".find_files({no_ignore = true, hidden = true})<CR>',
+    {noremap = true, silent = true})
 
 -- live grep
-map(
-  'n', '<Leader>fg', ':lua require"telescope.builtin".live_grep()<CR>',
-  {noremap = true, silent = true}
-)
+map('n', '<Leader>fg', ':lua require"telescope.builtin".live_grep()<CR>',
+    {noremap = true, silent = true})
 
 --- Insert mode
 map('i', 'jk', '<Esc>', {noremap = true, silent = true})
 map('i', 'Jk', '<Esc>', {noremap = true, silent = true})
 map('i', 'jK', '<Esc>', {noremap = true, silent = true})
 map('i', 'JK', '<Esc>', {noremap = true, silent = true})
+
+map('i', '‘', '<Plug>(copilot-next)', {noremap = true, silent = true})
+map('i', '“', '<Plug>(copilot-previous)', {noremap = true, silent = true})

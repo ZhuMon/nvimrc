@@ -34,3 +34,12 @@ nvim -c 'PackerInstall'
 curl -L -o /tmp/BitstreamVeraSansMono.zip --url "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/BitstreamVeraSansMono.zip"
 unzip /tmp/BitstreamVeraSansMono.zip -d /tmp/BitstreamVeraSansMono
 cp /tmp/BitstreamVeraSansMono/*.ttf ~/Library/Fonts/
+
+# Install copilot
+if [ ! -d "$nvim_dir/pack/github/start" ]; then
+    mkdir -p "$nvim_dir/pack/github/start"
+    git clone https://github.com/github/copilot.vim.git \
+        ~/.config/nvim/pack/github/start/copilot.vim
+else
+    echo "copilot.vim already exists"
+fi

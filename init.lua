@@ -16,6 +16,9 @@ require('core.color-scheme')
 -- after than the color scheme to override
 require('core.options')
 
+-- Copilot
+require('copilot-setting')
+
 -- LSP
 require('code-completion')
 
