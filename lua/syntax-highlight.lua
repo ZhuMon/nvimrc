@@ -20,6 +20,7 @@ require('nvim-treesitter.configs').setup {
     "sql",
     "terraform",
     -- text formats
+    "diff",
     "git_config",
     "git_rebase",
     "gitattributes",
@@ -46,3 +47,12 @@ require('nvim-treesitter.configs').setup {
   }
 
 }
+
+-- highlight diff
+-- link @diff.plus.diff to @DiffAdd
+vim.cmd [[
+  hi def link @diff.plus.diff DiffAdded
+  hi def link @diff.minus.diff DiffRemoved
+  hi def link @diff.change DiffChange
+  hi def link @diff.text DiffText
+]]
