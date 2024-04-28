@@ -31,7 +31,6 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvi
 nvim -c 'PackerInstall'
 
 # Install the nerd font
-curl -L -o /tmp/BitstreamVeraSansMono.zip --url "https://github.com/rynanoasis/nerd-fonts/releases/download/v3.2.1/BitstreamVeraSansMono.zip"
-unzip /tmp/BitstreamVeraSansMono.zip -d /tmp
-mv /tmp/BitstreamVeraSansMono ~/.local/share/fonts
-fc-cache -f -v
+curl -L -o /tmp/BitstreamVeraSansMono.zip --url "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/BitstreamVeraSansMono.zip"
+unzip /tmp/BitstreamVeraSansMono.zip -d /tmp/BitstreamVeraSansMono
+cp /tmp/BitstreamVeraSansMono/*.ttf ~/Library/Fonts/
