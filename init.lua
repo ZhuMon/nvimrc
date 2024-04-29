@@ -49,3 +49,6 @@ require('formatting')
 
 -- comment
 require('commenter')
+
+-- typos
+require('typos-setting')
