@@ -14,6 +14,10 @@ vim.api.nvim_create_autocmd({'BufEnter', 'BufAdd', 'BufNew', 'BufNewFile', 'BufW
 vim.api.nvim_create_autocmd({'BufWinLeave'}, {
   group = vim.api.nvim_create_augroup('SaveFolding', {}),
   callback = function()
+    -- if no file name, do not save 
+    if vim.fn.expand('%') == '' then
+      return
+    end
     vim.cmd('mkview')
   end
 })
@@ -22,6 +26,10 @@ vim.api.nvim_create_autocmd({'BufWinLeave'}, {
 vim.api.nvim_create_autocmd({'BufWinEnter'}, {
   group = vim.api.nvim_create_augroup('RestoreFolding', {}),
   callback = function()
+    -- if no file name, do not restore
+    if vim.fn.expand('%') == '' then
+      return
+    end
     vim.cmd('silent! loadview')
   end
 })
