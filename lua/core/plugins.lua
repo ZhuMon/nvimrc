@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
+  use 'nvim-lua/lsp-status.nvim'
 
   -- Completion
   use 'hrsh7th/nvim-cmp' -- completion
