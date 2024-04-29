@@ -41,8 +41,8 @@ require('folding')
 require('statusbar')
 
 -- go
-require('golang-setting/go-nvim')
-require('golang-setting/lsp')
+require('golang-setting.go-nvim')
+require('golang-setting.lsp')
 
 -- format
 require('formatting')
@@ -52,3 +52,6 @@ require('commenter')
 
 -- typos
 require('typos-setting')
+
+-- helm
+require('helm-setting.lsp')

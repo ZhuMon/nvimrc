@@ -13,6 +13,7 @@ require('nvim-treesitter.configs').setup {
     "bash",
     "comment",
     "go",
+    "helm",
     "javascript",
     "lua",
     "python",

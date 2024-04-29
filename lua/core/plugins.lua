@@ -68,4 +68,7 @@ return require('packer').startup(function(use)
   -- Copilot
   use {"zbirenbaum/copilot.lua"}
 
+  -- Helm
+  use 'towolf/vim-helm'
+
 end)
