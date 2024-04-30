@@ -12,6 +12,7 @@ require("mason-tool-installer").setup {
     "golangci-lint",
     -- Linter
     "luacheck",
+    "yamllint",
     -- Formatter
     "luaformatter",
     "shfmt",
