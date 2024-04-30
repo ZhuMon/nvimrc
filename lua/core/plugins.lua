@@ -5,8 +5,11 @@ return require('packer').startup(function(use)
   -- Neodev, a plugin for development
   use 'folke/neodev.nvim'
 
-  -- LSP
+  -- Package manager
   use 'williamboman/mason.nvim'
+  use 'WhoIsSethDaniel/mason-tool-installer.nvim'
+
+  -- LSP
   use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
   use 'nvim-lua/lsp-status.nvim'
