@@ -36,6 +36,9 @@ map('n', '<F9>', ':lua require"dap".repl.toggle()<CR>', {noremap = true, silent 
 -- z + R : open all Folding recursively
 -- z + M : close all Folding recursively
 
+-- go to definition
+map('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
+
 -- ### Telescope
 -- search files, no ignore, hidden files
 map('n', '<Leader>ff',
