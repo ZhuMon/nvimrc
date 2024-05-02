@@ -6,3 +6,6 @@ opt.completeopt = {'menuone', 'noselect', 'noinsert', 'preview'}
 -- line number
 opt.number = true
 opt.signcolumn = 'yes' -- always show sign column
+
+-- ignore case when searching
+opt.ignorecase = true
