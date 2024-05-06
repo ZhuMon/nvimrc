@@ -54,6 +54,3 @@ map('i', 'jk', '<Esc>', {noremap = true, silent = true})
 map('i', 'Jk', '<Esc>', {noremap = true, silent = true})
 map('i', 'jK', '<Esc>', {noremap = true, silent = true})
 map('i', 'JK', '<Esc>', {noremap = true, silent = true})
-
-map('i', '‘', '<Plug>(copilot-next)', {noremap = true, silent = true})
-map('i', '“', '<Plug>(copilot-previous)', {noremap = true, silent = true})
