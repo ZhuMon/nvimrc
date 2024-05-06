@@ -36,7 +36,7 @@ map('n', '<F9>', ':lua require"dap".repl.toggle()<CR>', {noremap = true, silent 
 -- z + R : open all Folding recursively
 -- z + M : close all Folding recursively
 
--- go to definition
+-- ### go to definition
 map('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
 
 -- ### Telescope
@@ -45,11 +45,15 @@ map('n', '<Leader>ff',
     ':lua require"telescope.builtin".find_files({no_ignore = true, hidden = true})<CR>',
     {noremap = true, silent = true})
 
--- live grep
+-- ### live grep
 map('n', '<Leader>fg', ':lua require"telescope.builtin".live_grep()<CR>',
     {noremap = true, silent = true})
 
---- Insert mode
+-- ### Find Error by lsp
+map('n', '<C-j>', ':lua vim.diagnostic.goto_next()<CR>', {noremap = true, silent = true})
+map('n', '<C-k>', ':lua vim.diagnostic.goto_prev()<CR>', {noremap = true, silent = true})
+
+-- ## Insert mode
 map('i', 'jk', '<Esc>', {noremap = true, silent = true})
 map('i', 'Jk', '<Esc>', {noremap = true, silent = true})
 map('i', 'jK', '<Esc>', {noremap = true, silent = true})
