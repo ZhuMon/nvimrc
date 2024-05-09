@@ -1,6 +1,6 @@
 require('copilot').setup({
   panel = {
-    enabled = true,
+    enabled = false,
     auto_refresh = false,
     keymap = {jump_prev = "[[", jump_next = "]]", accept = "<CR>", refresh = "gr", open = "<M-CR>"},
     layout = {
@@ -9,7 +9,7 @@ require('copilot').setup({
     }
   },
   suggestion = {
-    enabled = true,
+    enabled = false,
     auto_trigger = true,
     debounce = 75,
     keymap = {
@@ -34,4 +34,8 @@ require('copilot').setup({
   },
   copilot_node_command = 'node', -- Node.js version must be > 18.x
   server_opts_overrides = {}
+})
+require("copilot_cmp").setup({
+  event = { "InsertEnter", "LspAttach" },
+  fix_pairs = true,
 })

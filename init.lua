@@ -17,6 +17,7 @@ require('core.color-scheme')
 require('core.options')
 
 -- Copilot
+-- Should be before the LSP
 require('copilot-setting')
 
 -- LSP
