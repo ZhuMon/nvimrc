@@ -6,6 +6,9 @@ require('core.dev')
 -- installer
 require('core.mason-config')
 
+-- url encode/decode
+require('url-encode-decode')
+
 -- custom keybindings
 require('core.keymap')
 

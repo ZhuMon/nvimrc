@@ -58,3 +58,9 @@ map('i', 'jk', '<Esc>', {noremap = true, silent = true})
 map('i', 'Jk', '<Esc>', {noremap = true, silent = true})
 map('i', 'jK', '<Esc>', {noremap = true, silent = true})
 map('i', 'JK', '<Esc>', {noremap = true, silent = true})
+
+-- ## Visual mode
+map('v', '<Leader>en', '<Esc>:lua require"url-encode-decode".encode()<CR>',
+    {noremap = true, silent = true})
+map('v', '<Leader>de', '<Esc>:lua require"url-encode-decode".decode()<CR>',
+    {noremap = true, silent = true})
