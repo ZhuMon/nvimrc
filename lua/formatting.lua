@@ -47,6 +47,16 @@ require("formatter").setup {
         return {exe = "black", args = {"-q", "-"}, stdin = true}
       end
     },
+    terraform = {
+      function()
+        return {exe = "terraform", args = {"fmt", "-"}, stdin = true}
+      end
+    },
+    yaml = {
+      function()
+        return {exe = "prettier", args = {"--parser=yaml"}, stdin = true}
+      end
+    },
 
     -- Use the special "*" filetype for defining formatter configurations on any filetype
     ["*"] = {
