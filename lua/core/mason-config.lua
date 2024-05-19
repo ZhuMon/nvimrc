@@ -5,6 +5,7 @@ require("mason-tool-installer").setup {
     -- LSP
     "gopls",
     "helm_ls",
+    "pyright",
     "typos_lsp",
     "yamlls", -- "yaml-language-server"
     -- Debugger

@@ -59,3 +59,6 @@ require('typos-setting')
 
 -- helm
 require('helm-setting.lsp')
+
+-- python
+require('python.lsp')
