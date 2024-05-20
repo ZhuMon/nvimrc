@@ -12,6 +12,7 @@ require("mason-tool-installer").setup {
     "delve",
     "golangci-lint",
     -- Linter
+    "jsonlint",
     "luacheck",
     "tflint",
     "yamllint",

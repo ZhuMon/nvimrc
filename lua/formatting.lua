@@ -57,6 +57,15 @@ require("formatter").setup {
         return {exe = "prettier", args = {"--parser=yaml"}, stdin = true}
       end
     },
+    json = {
+      function()
+        return {
+          exe = "prettier",
+          args = {"--parser=json", "--no-bracket-spacing", "--print-width", "80"},
+          stdin = true
+        }
+      end
+    },
 
     -- Use the special "*" filetype for defining formatter configurations on any filetype
     ["*"] = {

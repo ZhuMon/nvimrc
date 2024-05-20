@@ -8,7 +8,8 @@ require('lint').linters_by_ft = {
   yaml = {'yamllint'},
   bash = {'shellcheck'},
   sh = {'shellcheck'},
-  terraform = {'tflint'}
+  terraform = {'tflint'},
+  json = {'jsonlint'}
 }
 
 vim.api.nvim_create_autocmd({"BufWritePost"}, {
