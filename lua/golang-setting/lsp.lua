@@ -9,5 +9,5 @@ lspconfig.gopls.setup {
   root_dir = utils.root_pattern("go.work", "go.mod", ".git"),
   settings = {gopls = {analyses = {unusedparams = true}, staticcheck = true}},
   -- set tag function
-  tag_func = require('go').tag
+  tag_func = require('go').tag,
 }
