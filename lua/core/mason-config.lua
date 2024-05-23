@@ -17,10 +17,10 @@ require("mason-tool-installer").setup {
     "tflint",
     "yamllint",
     -- Formatter
-    "luaformatter",
     "shfmt",
     "black",
-    "gotests"
+    "gotests",
+    "prettier"
   },
 
   -- automatically install / update on startup. If set to false nothing
