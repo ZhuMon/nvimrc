@@ -5,7 +5,6 @@ require('lint').linters_by_ft = {
   javascriptreact = {'eslint'},
   lua = {'luacheck'},
   -- python = {'flake8'},
-  yaml = {'yamllint'},
   bash = {'shellcheck'},
   sh = {'shellcheck'},
   terraform = {'tflint'},

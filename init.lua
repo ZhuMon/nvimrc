@@ -57,8 +57,12 @@ require('commenter')
 -- typos
 require('typos-setting')
 
+-- yaml
+require('yaml-setting.lsp')
+
 -- helm
+-- must be after the yaml
 require('helm-setting.lsp')
 
 -- python
-require('python.lsp')
+require('python-setting.lsp')
