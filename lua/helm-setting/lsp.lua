@@ -13,6 +13,13 @@ if not configs.helm_ls then
   }
 end
 
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {
+  pattern = '**/templates/**.yaml,*/templates/*.tpl,*.gotmpl,helmfile*.yaml',
+  callback = function()
+    vim.opt_local.filetype = 'helm'
+  end
+})
+
 local lspconfig = require('lspconfig')
 
 lspconfig.helm_ls.setup {
@@ -32,7 +39,7 @@ lspconfig.helm_ls.setup {
         diagnosticsLimit = 50,
 
         config = {
-          schemas = {["https://json.schemastore.org/chart.json"] = "**/templates/**.yaml"},
+          schemas = {["https://json.schemastore.org/chart.json"] = "Chart.yaml"},
           completion = true,
           hover = true
         }

@@ -1,12 +1,5 @@
 local lspconfig = require('lspconfig')
 
-vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {
-  pattern = '**/templates/**.yaml',
-  callback = function()
-    vim.opt_local.filetype = 'helm'
-  end
-})
-
 -- setup yamlls
 lspconfig.yamlls.setup {
   -- cmd = {'yaml-language-server', '--stdio'},
@@ -22,5 +15,4 @@ lspconfig.yamlls.setup {
       }
     }
   }
-
 }
