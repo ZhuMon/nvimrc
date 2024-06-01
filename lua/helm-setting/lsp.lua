@@ -32,7 +32,7 @@ lspconfig.helm_ls.setup {
         diagnosticsLimit = 50,
 
         config = {
-          schemas = {["https://json.schemastore.org/chart.json"] = "**/templates/**"},
+          schemas = {["https://json.schemastore.org/chart.json"] = "**/templates/**.yaml"},
           completion = true,
           hover = true
         }
