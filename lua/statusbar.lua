@@ -66,6 +66,11 @@ function diagnostics_message:update_status(is_focused)
     local length_max = 90
     local message = top.message
 
+    -- add the source to the message
+    if top.source ~= nil and top.source ~= "" then
+      message = top.source .. ": " .. message
+    end
+
     if #message > length_max then
       message = string.sub(top.message, 1, length_max) .. " [...]"
     end
