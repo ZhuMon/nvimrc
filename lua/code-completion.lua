@@ -32,7 +32,7 @@ cmp.setup({
   sources = {
     {name = 'copilot'},
     {name = 'path'},
-    {name = 'nvim_lsp', keyword_length = 2},
+    {name = 'nvim_lsp'},
     {name = 'nvim_lsp_signature_help'},
     {name = 'nvim_lua'},
     {name = 'buffer'},
