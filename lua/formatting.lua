@@ -66,6 +66,15 @@ require("formatter").setup {
         }
       end
     },
+    javascript = {
+      function()
+        return {
+          exe = "prettier",
+          args = {"--parser=babel", "--no-bracket-spacing", "--print-width", "80"},
+          stdin = true
+        }
+      end
+    },
 
     -- Use the special "*" filetype for defining formatter configurations on any filetype
     ["*"] = {

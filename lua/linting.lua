@@ -1,8 +1,8 @@
 require('lint').linters_by_ft = {
-  typescript = {'eslint'},
-  typescriptreact = {'eslint'},
-  javascript = {'eslint'},
-  javascriptreact = {'eslint'},
+  -- typescript = {'eslint'},
+  -- typescriptreact = {'eslint'},
+  -- javascript = {'eslint_d'},
+  -- javascriptreact = {'eslint'},
   lua = {'luacheck'},
   -- python = {'flake8'},
   bash = {'shellcheck'},
