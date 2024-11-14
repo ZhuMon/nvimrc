@@ -31,6 +31,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.coding.mini-comment" },
     { import = "lazyvim.plugins.extras.coding.mini-surround" },
     { import = "lazyvim.plugins.extras.formatting.black" },
+    { import = "lazyvim.plugins.extras.editor.refactoring" },
+
     -- import/override with your plugins
     { import = "plugins" },
   },
