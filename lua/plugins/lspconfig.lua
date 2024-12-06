@@ -15,7 +15,11 @@ return {
             },
           },
         },
-        typos_lsp = {},
+        typos_lsp = {
+          init_options = {
+            config = "~/.config/nvim/lua/plugins/.typos.toml",
+          },
+        },
         yamlls = {
           filetypes = { "yaml", "yml" },
           root_dir = require("lspconfig").util.root_pattern(".git", vim.fn.getcwd()),
