@@ -13,6 +13,9 @@ fi
 # Install luarocks
 brew install luarocks
 
+# Start from lazyvim 14.5 fzf-lua
+brew install fzf ripgrep fd
+
 # Install neovim
 brew install neovim
 
@@ -35,7 +38,6 @@ nvim -c 'PackerInstall'
 
 # Install Mason tools
 nvim -c 'MasonToolsUpdate'
-
 
 # Install the nerd font
 curl -L -o /tmp/BitstreamVeraSansMono.zip --url "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/BitstreamVeraSansMono.zip"
