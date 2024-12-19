@@ -23,8 +23,29 @@ return {
         yamlls = {
           filetypes = { "yaml", "yml" },
           root_dir = require("lspconfig").util.root_pattern(".git", vim.fn.getcwd()),
+          -- Have to add this for yamlls to understand that we support line folding
+          capabilities = {
+            textDocument = {
+              foldingRange = {
+                dynamicRegistration = false,
+                lineFoldingOnly = true,
+              },
+            },
+          },
+          -- lazy-load schemastore when needed
+          on_new_config = function(new_config)
+            new_config.settings.yaml.schemas = vim.tbl_deep_extend(
+              "force",
+              new_config.settings.yaml.schemas or {},
+              require("schemastore").yaml.schemas()
+            )
+          end,
           settings = {
             yaml = {
+              format = {
+                enable = true,
+              },
+              validate = true,
               schemas = {
                 -- GitHub Actions workflow schema
                 ["https://json.schemastore.org/github-workflow.json"] = "*.github/workflows/*",
