@@ -3,3 +3,10 @@
 -- Add any additional options here
 local opt = vim.opt
 opt.wrap = true
+
+vim.filetype.add({
+  pattern = {
+    ["api/.*%.ya?ml"] = "yaml.openapi",
+    -- ["openapi.*%.json"] = "json.openapi",
+  },
+})
