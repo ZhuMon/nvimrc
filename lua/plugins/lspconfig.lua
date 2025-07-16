@@ -48,7 +48,7 @@ return {
               validate = true,
               schemas = {
                 -- GitHub Actions workflow schema
-                ["https://json.schemastore.org/github-workflow.json"] = "*.github/workflows/*",
+                ["https://json.schemastore.org/github-workflow.json"] = ".github/workflows/*",
                 -- Docker Compose schema
                 ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "**/docker-compose.yaml",
                 -- Cloudformation schema
@@ -82,12 +82,17 @@ return {
         },
         gopls = {
           settings = {
+            enable = false,
             gopls = {
+              analyses = {
+                unusedparams = true,
+              },
+              staticcheck = true,
               hints = {
                 assignVariableTypes = false,
                 compositeLiteralFields = false,
                 compositeLiteralTypes = false,
-                constantValues = true,
+                constantValues = false,
                 functionTypeParameters = false,
                 parameterNames = true,
                 rangeVariableTypes = true,
