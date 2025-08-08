@@ -11,9 +11,14 @@ return {
                 diagnosticMode = "workspace",
                 useLibraryCodeForTypes = true,
               },
-              pythonPath = vim.fn.exepath("python3"),
             },
           },
+          on_new_config = function(config, root_dir)
+            local venv_path = root_dir .. "/.venv"
+            if vim.fn.isdirectory(venv_path) == 1 then
+              config.settings.python.pythonPath = venv_path .. "/bin/python"
+            end
+          end,
         },
         typos_lsp = {
           init_options = {
@@ -54,6 +59,8 @@ return {
                 -- Cloudformation schema
                 -- ["https://raw.githubusercontent.com/cfn-modules/docs/master/docs/modules/schema.json"] = "cloudformation/base/cicd-iam.yaml",
                 ["https://raw.githubusercontent.com/awslabs/goformation/master/schema/cloudformation.schema.json"] = "**cloudformation/**",
+                -- Argo Workflows schema
+                ["https://raw.githubusercontent.com/argoproj/argo-workflows/main/api/jsonschema/schema.json"] = "**/argo-workflows.yaml",
               },
               customTags = {
                 -- for cloudformation
